@@ -17,7 +17,6 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="<?= base_url("assets/") ?>pl21ugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
-    12
     <link rel="stylesheet" href="<?= base_url("assets/") ?>plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url("assets/") ?>dist/css/adminlte.min.css">
@@ -27,6 +26,14 @@
     <link rel="stylesheet" href="<?= base_url("assets/") ?>plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="<?= base_url("assets/") ?>plugins/summernote/summernote-bs4.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?= base_url("assets/") ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url("assets/") ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url("assets/") ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- jQuery -->
+    <script src="<?= base_url("assets/") ?>plugins/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -79,8 +86,7 @@
     </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
-    <script src="<?= base_url("assets/") ?>plugins/jquery/jquery.min.js"></script>
+
     <!-- jQuery UI 1.11.4 -->
     <script src="<?= base_url("assets/") ?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -113,6 +119,31 @@
     <script src="<?= base_url("assets/") ?>dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?= base_url("assets/") ?>dist/js/pages/dashboard.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="<?= base_url("assets/") ?>/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/jszip/jszip.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="<?= base_url("assets/") ?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#datatable").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
 </body>
 
 </html>

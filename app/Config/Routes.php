@@ -30,6 +30,32 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'LayoutController::index');
+$routes->get('/category', 'CategoryController::index');
+$routes->get('/category/add', 'CategoryController::add');
+$routes->get('/category/edit/', 'CategoryController::edit/');
+$routes->post('/category/update', 'CategoryController::update');
+$routes->post('/category/store', 'CategoryController::store');
+$routes->post('/category/destroy', 'CategoryController::destroy');
+
+$routes->get('/product', 'ProductController::index');
+$routes->get('/product/add', 'ProductController::add');
+$routes->get('/product/getCategory', 'ProductController::getCategory');
+$routes->get('/product/edit/(:num)', 'ProductController::edit/$1');
+$routes->post('/product/store', 'ProductController::store');
+$routes->post('/product/update', 'ProductController::update');
+$routes->post('/product/destroy', 'ProductController::destroy');
+
+$routes->get('/sales', 'SalesController::index');
+$routes->get('/sales/add', 'SalesController::add');
+$routes->post('/sales/data', 'SalesController::data');
+$routes->get('/sales/getProduct', 'SalesController::getProduct');
+$routes->get('/sales/sumTotal', 'SalesController::sumTotal');
+$routes->get('/sales/viewDataProduct', 'SalesController::viewDataProduct');
+$routes->get('/sales/createFaktur', 'SalesController::createFaktur');
+$routes->get('/sales/edit/(:num)', 'SalesController::edit/$1');
+$routes->post('/sales/store', 'SalesController::store');
+$routes->post('/sales/update', 'SalesController::update');
+$routes->post('/sales/destroy', 'SalesController::destroy');
 
 /*
  * --------------------------------------------------------------------
