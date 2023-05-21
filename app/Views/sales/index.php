@@ -91,7 +91,9 @@
                                 <th scope="col">Nama Produk</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Total Harga</th>
-                                <th scope="col">Action</th>
+                                <?php if (in_groups('admin')) : ?>
+                                    <th scope="col">Action</th>
+                                <?php endif ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -107,11 +109,11 @@
                                     <td><?= $data['nama'] ?></td>
                                     <td><?= $data['qty'] ?></td>
                                     <td class="text-right">Rp <?= number_format($data['total_price'], 0, ",", ".") ?></td>
-                                    <td class="text-right">
-                                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteItem('<?= $data['id'] ?>', '<?= $data['nama'] ?>')">
+                                    <?php if (in_groups('admin')) : ?>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteProduct('<?= $product['product_id'] ?>', '<?= $data['nama'] ?>')">
                                             <i class="fa fa-trash-alt"></i>
                                         </button>
-                                    </td>
+                                    <?php endif ?>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>

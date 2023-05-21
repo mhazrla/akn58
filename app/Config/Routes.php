@@ -30,20 +30,20 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'LayoutController::index');
-$routes->get('/category', 'CategoryController::index');
-$routes->get('/category/add', 'CategoryController::add');
-$routes->get('/category/edit/', 'CategoryController::edit/');
-$routes->post('/category/update', 'CategoryController::update');
-$routes->post('/category/store', 'CategoryController::store');
-$routes->post('/category/destroy', 'CategoryController::destroy');
+$routes->get('/category', 'CategoryController::index', ['filter' => 'role:admin']);
+$routes->get('/category/add', 'CategoryController::add', ['filter' => 'role:admin']);
+$routes->get('/category/edit/', 'CategoryController::edit/', ['filter' => 'role:admin']);
+$routes->post('/category/update', 'CategoryController::update', ['filter' => 'role:admin']);
+$routes->post('/category/store', 'CategoryController::store', ['filter' => 'role:admin']);
+$routes->post('/category/destroy', 'CategoryController::destroy', ['filter' => 'role:admin']);
 
-$routes->get('/product', 'ProductController::index');
-$routes->get('/product/add', 'ProductController::add');
-$routes->get('/product/getCategory', 'ProductController::getCategory');
-$routes->get('/product/edit/(:num)', 'ProductController::edit/$1');
-$routes->post('/product/store', 'ProductController::store');
-$routes->post('/product/update', 'ProductController::update');
-$routes->post('/product/destroy', 'ProductController::destroy');
+$routes->get('/product', 'ProductController::index', ['filter' => 'role:admin']);
+$routes->get('/product/add', 'ProductController::add', ['filter' => 'role:admin']);
+$routes->get('/product/getCategory', 'ProductController::getCategory', ['filter' => 'role:admin']);
+$routes->get('/product/edit/(:num)', 'ProductController::edit/$1', ['filter' => 'role:admin']);
+$routes->post('/product/store', 'ProductController::store', ['filter' => 'role:admin']);
+$routes->post('/product/update', 'ProductController::update', ['filter' => 'role:admin']);
+$routes->post('/product/destroy', 'ProductController::destroy', ['filter' => 'role:admin']);
 
 $routes->get('/sales', 'SalesController::index');
 $routes->get('/sales/add', 'SalesController::add');
