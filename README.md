@@ -16,10 +16,11 @@ The user guide corresponding to the latest version of the framework can be found
 
 ## Installation & updates
 
-1. `composer install`
-2. `php spark migrate -all` for migrate all tables
-3. `php spark db:seed` for seeding data
-4. `php spark serve` for running the project
+1. Rename `env example` file to `.env`
+2. `composer install`
+3. `php spark migrate -all` for migrate all tables
+4. `php spark db:seed` for seeding data
+5. `php spark serve` for running the project
 
 ## Setup
 
