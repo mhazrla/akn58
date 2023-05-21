@@ -16,12 +16,11 @@ The user guide corresponding to the latest version of the framework can be found
 
 ## Installation & updates
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. Rename `env example` file to `.env`
+2. `composer install`
+3. `php spark migrate -all` for migrate all tables
+4. `php spark db:seed` for seeding data
+5. `php spark serve` for running the project
 
 ## Setup
 
