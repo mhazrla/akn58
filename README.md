@@ -27,6 +27,12 @@ The user guide corresponding to the latest version of the framework can be found
 Copy `env` to `.env` and tailor for your app, specifically the baseURL
 and any database settings.
 
+## Admin Account
+
+`email`    => `admin@gmail.com`
+`username` => `admin`
+`password` => Admin123!`
+
 ## Important Change with index.php
 
 `index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
