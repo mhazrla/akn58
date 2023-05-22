@@ -29,9 +29,9 @@ and any database settings.
 
 ## Admin Account
 
-`email`    => `admin@gmail.com`
-`username` => `admin`
-`password` => Admin123!`
+1. `email`    => `admin@gmail.com`
+2. `username` => `admin`
+3. `password` => Admin123!`
 
 ## Important Change with index.php
 
