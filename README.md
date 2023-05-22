@@ -31,7 +31,7 @@ and any database settings.
 
 1. `email`    => `admin@gmail.com`
 2. `username` => `admin`
-3. `password` => Admin123!`
+3. `password` => `Admin123!`
 
 ## Important Change with index.php
 
